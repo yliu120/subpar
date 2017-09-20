@@ -1,4 +1,7 @@
-sudo: required
+os:
+  - linux
+  - osx
+sudo: false
 dist: trusty
 language:
   - java
@@ -11,6 +14,8 @@ addons:
         key_url: 'https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg'
     packages:
       - bazel
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install bazel; fi
 script:
   - bazel build //...
   - bazel test --test_output=errors //...
