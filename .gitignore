@@ -1,6 +1,0 @@
-# Bazel files
-/bazel-*
-docs/bazel-*
-
-# Python
-*.pyc
