@@ -203,6 +203,6 @@ def par_test(name, **kwargs):
     default_python_version = kwargs.get('default_python_version', 'PY2')
     visibility = kwargs.get('visibility')
     parfile_test(
-        name=name + '.par', src=name, main=main, imports=imports,
+        name=name + '.par.py', src=name, main=main, imports=imports,
         default_python_version=default_python_version, visibility=visibility,
     )
