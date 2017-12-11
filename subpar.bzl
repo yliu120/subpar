@@ -187,7 +187,7 @@ def par_binary(name, **kwargs):
     default_python_version = kwargs.get('default_python_version', 'PY3')
     visibility = kwargs.get('visibility')
     testonly = kwargs.get('testonly', False)
-    parfile(name=name + '.py', src=name, main=main, imports=imports,
+    parfile(name=name + '.par', src=name, main=main, imports=imports,
             default_python_version=default_python_version, visibility=visibility,
             testonly=testonly)
 
